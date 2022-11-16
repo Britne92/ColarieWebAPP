@@ -1,0 +1,147 @@
+<header id="header" class="header fixed-top" data-scrollto-offset="0">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+        <a href="/" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
+            &nbsp;&nbsp;
+            <img src="/img/logo.png">
+            <h1>Colarie Store<span>✿</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="dropdown"><a href="/facebook"><span><i
+                                class=""></i>&nbsp;Ropa</span> <i
+                            class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        {{#each totalItems}}
+                        {{#if (eq socialMedia "facebook")}}
+                        {{#if (eq ../category.socialMedia socialMedia)}}
+                        {{#if (eq ../category.category category)}}
+                        <li><a href="/{{socialMedia}}/{{categoryLink}}" class="active">&nbsp;{{category}}</a></li>
+                        {{else}}
+                        <li><a href="/{{socialMedia}}/{{categoryLink}}" class="">&nbsp;{{category}}</a></li>
+                        {{/if}}
+                        {{else}}
+                        <li><a href="/{{socialMedia}}/{{categoryLink}}" class="">&nbsp;{{category}}</a></li>
+                        {{/if}}
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </li>
+               
+                {{#if help}}
+                <li class="active"><a href="/help" class="nav-link scrollto active"><span><i
+                                class="fa-solid fa-circle-question"></i>&nbsp;Ayuda</span></a>
+                </li>
+                {{else}}
+                <li class=""><a href="/help" class="nav-link scrollto "><span><i
+                                class="fa-solid fa-circle-question"></i>&nbsp;Ayuda</span></a>
+                </li>
+                {{/if}}
+                <li class="dropdown"><a href="/facebook"><span><i
+                                class="fa-solid fa-earth-americas"></i>&nbsp;Soporte</span> <i
+                            class="bi bi-chevron-down dropdown-indicator"></i></a>
+                    <ul>
+                        {{#if adviser}}
+                        <li class="active"><a href="/adviser/spain"><span><span class="emoji">🇪🇸</span>&nbsp;Asesor de
+                                    Colombia</span></a>
+                        </li>
+                        {{else}}
+                        <li class=""><a href="/adviser/spain"><span><span class="emoji">🇪🇸</span>&nbsp;Asesor de
+                                    Colombia</span></a>
+                        </li>
+                        {{/if}}
+                    </ul>
+                </li>
+                {{#if terms}}
+                <li class="active"><a href="/terms" class="nav-link scrollto active"><span><i
+                                class="fa-solid fa-book-open"></i>&nbsp;Términos y
+                            condiciones</span></a>
+                </li>
+                {{else}}
+                <li class=""><a href="/terms"><span><i class="fa-solid fa-book-open"></i>&nbsp;Términos y
+                            condiciones</span></a>
+                </li>
+                {{/if}}
+
+            </ul>
+
+            <i class="bi mobile-nav-toggle d-none bi-list"></i>
+        </nav><!-- .navbar -->
+        <div class="button2">
+            <a id="cart-link" class="button2 btn trsn nav-link btn-getstarted scrollto" data-bs-toggle="offcanvas"
+                href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="nav-bar-cart"><span class="cart-size"></span>|
+                    ${{total}}</span>
+            </a>
+        </div>
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h4 class="offcanvas-title" id="offcanvasExampleLabel"><img src="/img/logo-3.png" width="300"></h4>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <section id="pricing" class="pricing">
+                    <div class="container aos-init aos-animate" data-aos="fade-up">
+                        <div class="section-header">
+                        </div>
+                        <div class="row gy-4">
+                            <div class="col-lg-12 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="pricing-item2 featured">
+                                    <div class="pricing-header">
+                                        <h3>Compras</h3>
+                                    </div>
+                                    <br><br>
+                                    {{#if ItemsCart}}
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th class="mob-hide">Producto</th>
+                                                <th class="table-qty">Cant</th>
+                                                <th>Val</th>
+                                                <th>Sub</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ItemsCart}}
+                                            <tr>
+                                                <td>{{cantidad}} {{nombre}}</td>
+                                                <td>
+                                                    x{{cont}}
+                                                </td>
+                                                <td>${{valorNuevo}}</td>
+                                                <td>${{subtotal}}</td>
+                                                <td clas="text-right"> <a
+                                                        href="/remove/item/{{redSocial}}/{{categoriaLink}}/{{link}}"
+                                                        class="cart-product-remove" title="Remove Product"><i
+                                                            class="fas fa-times-circle"></i></a></td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                    <br>
+                                    <div class="text-center mt-auto">
+                                        <a href="/cart" class="button buy-btn">Ver Carro</a>
+                                        <br>
+                                        <br>
+                                        <a href="/cart/checkout">Finalizar Compra</a>
+                                    </div>
+                                    <script type=«text/javascript» src=»https://checkout.epayco.co/checkout.js»></script>
+                                    {{else}}
+                                    <div class="row center">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <div class="button col-9 text-center mt-auto">
+                                            <a href="/" class="buy-btn">No hay elementos seleccionados</a>
+                                        </div>
+                                    </div>
+                                    {{/if}}
+                                </div>
+                            </div><!-- End Pricing s -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</header>

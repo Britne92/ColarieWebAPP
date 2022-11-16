@@ -1,0 +1,132 @@
+<br><br>
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2><img src="/img/logo.png" width="50"> Portfolio Details</h2>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                <li>Portfolio Details</li>
+            </ol>
+        </div>
+    </div>
+</div>
+<br><br>
+{{>message}}
+<section id="cta" class="cta">
+    <div class="container aos-init aos-animate" data-aos="zoom-out">
+        <div class="row ">
+            <div
+                class="col-lg-12 col-md-12 content d-flex flex-column justify-content-center order-last order-md-first">
+                <h3><em><i class="fas fa-shopping-cart" aria-hidden="true"></i>&nbsp;Carro de compras</em></h3>
+                <br>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mb-4">
+                            <form id="cart-update-form" method="post" action="/cart/update">
+                                <div class="table-responsive">
+                                    {{#if ItemsCart}}
+                                    <table class="table resp">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th class="mob-hide">Producto</th>
+                                                <th class="mob-hide">Precio Unitario</th>
+                                                <th class="table-qty">Cantidad</th>
+                                                <th class="mob-hide">Subtotal</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {{#each ItemsCart}}
+                                            <tr>
+                                                <td class="text-center mob-hide">
+                                                    <a href="/smartphone-mtk6572" class="trsn"
+                                                        title="Smartphone MTK6572 ">
+                                                        <img src="{{imagen}}" alt="Smartphone MTK6572 "
+                                                            title="SocialMedia" width="50" height="50">
+                                                    </a>
+                                                </td>
+                                                <td>{{cantidad}} {{nombre}}</td>
+                                                <td class="mob-hide">
+                                                    <span class="order-product-price">${{valorNuevo}}</span>
+                                                </td>
+                                                <td>
+                                                    <input type="number"
+                                                        class="input-text qty text select2 select-qty form-control"
+                                                        step="1" min="1" max="" name="cont" value="{{cont}}"
+                                                        title="Cantidad" size="4" placeholder="" inputmode="numeric"
+                                                        autocomplete="off">
+                                                </td>
+                                                <td class="mob-hide">
+                                                    <span class="order-product-price">${{subtotal}}</span>
+                                                </td>
+                                                <td clas="text-right"> <a href="/remove/item1/{{redSocial}}/{{link}}"
+                                                        class="cart-product-remove" title="Remove Product"><i
+                                                            class="fas fa-lg fa-times-circle"></i></a></td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                    {{else}}
+                                    <br>
+                                    <img src="/assets/img/features-4.svg" alt="" class="img-fluid">
+                                    {{/if}}
+                                </div>
+                                <input type="hidden">
+                            </form>
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 cart-estimate">
+                                    <div class="card mb-3">
+                                        <div class="card-header">
+                                            <center>
+                                                <h2 class="card-title"><strong>Total del carrito</strong></h2>
+                                            </center>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="card-text">
+                                                <div id="estimate_shipping">
+                                                    <form action="/cart/estimate" accept-charset="UTF-8"
+                                                        id="estimate_shipping_form" autocomplete="off" method="post">
+                                                        <table class=" table table-borderless">
+                                                            <tbody>
+                                                                <tr class="totals">
+                                                                    <td colspan="1" class="text-right">SubTotal</td>
+                                                                    <td colspan="1" class="text-right">${{total}}</td>
+                                                                </tr>
+                                                                <tr class="totals key">
+                                                                    <td colspan="1" class="text-left">
+                                                                        <strong>Total</strong>
+                                                                    </td>
+                                                                    <td colspan="1" class="text-right">
+                                                                        <strong>${{total}}</strong>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{#if ItemsCart}}
+                                <div class="d-grid gap-2 d-md-block">
+                                    <div class="rowButtonCart" >
+                                        <div class="text-center col-10 cart-actions" >
+                                            <a class="button cta-btn align-self-start" href="/cart/checkout">Finalizar
+                                                Compra</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{/if}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>

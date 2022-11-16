@@ -1,30 +1,35 @@
 {
-  "name": "backend",
-  "type": "module",
+  "name": "colariestore",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm i -f",
-    "heroku-postbuild": "npm run install-client",
-    "client": "cd client && npm start"
-
-
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PL2Z35/ColarieStore.git"
+  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PL2Z35/ColarieStore/issues"
+  },
+  "homepage": "https://github.com/PL2Z35/ColarieStore#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "express-async-handler": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.2.11"
+    "connect-flash": "^0.1.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "nodemailer": "^6.7.5",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.19"
   }
 }

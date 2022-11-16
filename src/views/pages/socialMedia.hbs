@@ -1,0 +1,146 @@
+<br>
+{{#if (ne  socialMedia.nombre "")}}
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2><img src="/img/logo.png" width="50"> {{socialMedia.nombre}}</h2>
+            <ol>
+                <li><a href="index.html">Home</a></li>
+                {{#if category}}
+                <li><a href="/{{socialMedia.link}}">{{socialMedia.nombre}}</a></li>
+                <li>{{category.category}}</li>
+                {{else}}
+                <li>{{socialMedia.nombre}}</li>
+                {{/if}}
+            </ol>
+        </div>
+    </div>
+</div>
+<section id="services" class="services">
+    <div class="container aos-init aos-animate" data-aos="fade-up">
+        <div class="section-header">
+            <div class="" data-aos="zoom-out">
+                <img src="{{socialMedia.fondo}}" class="img-fluid animated" width="800" height="100%">
+            </div>
+            {{#if category}}
+            <h2>{{category.category}}</h2>
+            {{else}}
+            <h2>Servicios</h2>
+            {{/if}}
+            <p style="text-align: left">{{cantidad}} Resultados</p>
+        </div>
+        <div class="row gy-5">
+            {{#each packageSocial}}
+            <div class="col-xl-3 col-md-4 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
+                <div class="service-item">
+                    <div class="img">
+                        <img src="{{../socialMedia.item}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="details position-relative">
+                        <div class="icon">
+                            {{#if (eq redSocial "facebook")}}
+                            <i class='fa-brands fa-facebook-f'></i>
+                            {{else if (eq redSocial "instagram")}}
+                            <i class="fa-brands fa-instagram"></i>
+                            {{else if (eq redSocial "spotify")}}
+                            <i class="fa-brands fa-spotify"></i>
+                            {{else if (eq redSocial "tiktok")}}
+                            <i class="fa-brands fa-tiktok"></i>
+                            {{else if (eq redSocial "youtube")}}
+                            <i class="fa-brands fa-youtube"></i>
+                            {{else if (eq redSocial "likee")}}
+                            <i class="fa-solid fa-heart"></i>
+                            {{else if (eq redSocial "twitch")}}
+                            <i class="fa-brands fa-twitch"></i>
+                            {{else if (eq redSocial "telegram")}}
+                            <i class="fa-brands fa-telegram"></i>
+                            {{else if (eq redSocial "tidal")}}
+                            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="1em"
+                                height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M12.012 3.992L8.008 7.996L4.004 3.992L0 7.996L4.004 12l4.004-4.004L12.012 12l-4.004 4.004l4.004 4.004l4.004-4.004L12.012 12l4.004-4.004l-4.004-4.004zm4.03 4.004l3.979-3.979L24 7.996l-3.979 3.979z" />
+                            </svg>
+                            {{else if (eq redSocial "twitter")}}
+                            <i class="fa-brands fa-twitter"></i>
+                            {{else if (eq redSocial "soundcloud")}}
+                            <i class="fa-brands fa-soundcloud"></i>
+                            {{/if}}
+                        </div>
+                        <a href="/{{redSocial}}/{{categoriaLink}}/{{link}}" class="">
+                            <h3>{{cantidad}} {{nombre}}</h3>
+                        </a>
+                        <p class="clasificacion">
+                            <input type="radio" name="estrellas">
+                            {{#if (eq estrellas 5)}}
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            {{else if (eq estrellas 4)}}
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            {{else if (eq estrellas 3)}}
+                            <label>★</label>
+                            <label>★</label>
+                            <label>★</label>
+                            {{else if (eq estrellas 2)}}
+                            <label>★</label>
+                            <label>★</label>
+                            {{else if (eq estrellas 1)}}
+                            <label>★</label>
+                            {{/if}}
+                        </p>
+                        {{#if (eq banderas "si")}}
+                        <p>
+                        <h1 class="product_title entry-title"><img draggable="false" role="img" class="emoji2"
+                                alt="🇬🇸" src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1ec-1f1f8.svg">
+                            <img draggable="false" role="img" class="emoji2" alt="🇺🇸"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1fa-1f1f8.svg"> <img
+                                draggable="false" role="img" class="emoji2" alt="🇧🇷" width="10" height="10"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e7-1f1f7.svg"> <img
+                                draggable="false" role="img" class="emoji2" alt="🇦🇷"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e6-1f1f7.svg"> <img
+                                draggable="false" role="img" class="emoji2" alt="🇻🇪"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1fb-1f1ea.svg">
+                        </h1>
+                        </p>
+                        {{else if (eq banderas "latinos")}}
+                        <p>
+                        <h1 class="product_title entry-title">
+                            <img draggable="false" role="img" class="emoji2" alt="🇨🇴"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e8-1f1f4.svg">
+                            <img draggable="false" role="img" class="emoji2" alt="🇦🇷"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e6-1f1f7.svg">
+                            <img draggable="false" role="img" class="emoji2" alt="🇺🇾"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1fa-1f1fe.svg">
+                            <img draggable="false" role="img" class="emoji2" alt="🇨🇱"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e8-1f1f1.svg">
+                            <img draggable="false" role="img" class="emoji2" alt="🇧🇷"
+                                src="https://s.w.org/images/core/emoji/13.1.0/svg/1f1e7-1f1f7.svg">
+                        </h1>
+                        </p>
+                        {{/if}}
+                        <p>
+                        <div id="headerPrice">
+                            {{#if valorAntiguo}}
+                            <FONT color="#636363"><strike>
+                                    <h7><sup>$</sup>{{valorAntiguo}}</h7>
+                                </strike></FONT>&nbsp;&nbsp;
+                            {{/if}}
+                            <a class="stretched" href="/{{redSocial}}/{{link}}">
+                                <h3><sup>$</sup>{{valorNuevo}}</h3>
+                            </a>
+                        </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+</section>
+{{else}}
+{{>404}}
+{{/if}}
