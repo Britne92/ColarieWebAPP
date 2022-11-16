@@ -5,8 +5,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm i -f",
+    "install-client": "cd client && npm i -f",
+    "heroku-postbuild": "npm install-client && npm run build",
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "client": "cd client && npm start"
+
+
   },
   "author": "",
   "license": "ISC",
