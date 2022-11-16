@@ -13,7 +13,7 @@
             "4": "Si notas que en tu compra hay otros paquetes que nos has adquirido es porque son regalos que te hemos dado. No te preocupes, son gratis.  ",
             "5": "Ten en cuenta que al aceptar los términos y condiciones como también nuestra política de privacidad, cumples con no hacer reembolsos o disputas. En casos de inconvenientes con tu compra, podrás hacérnoslo saber primero a nosotros. Responderemos a todas tus inquietudes rápidamente."
         },
-        "valorAntiguo": 340,
+        "valorAntiguo": 345000,
         "valorNuevo": 17000000,
         "imagen": "https://www.flaticon.es/icono-gratis/camisa_7609074?term=shirt&page=1&position=4&page=1&position=4&related_id=7609074&origin=search"
     },
@@ -141,6 +141,24 @@
         },
         "valorAntiguo": 27,
         "valorNuevo": 1400000,
+        "imagen": "https://www.flaticon.es/icono-gratis/camisa_7609074?term=shirt&page=1&position=4&page=1&position=4&related_id=7609074&origin=search"
+    },
+    "9": {
+        "categoria": "Medias",
+        "redSocial": "facebook",
+        "cantidad": "5",
+        "nombre": "Medias Tobilleras",
+        "estrellas": 5,
+        "banderas": "no",
+        "detalles": {
+            "1": "El envió para cada pedido es de 01 horas a 48 horas, dependiendo de la cantidad de usuarios en lista, ésta puede ser más lenta.",
+            "2": "Todas las compras hechas en esta página están protegidas por doble garantía, la primera es de más de 1 año, y la segunda es un análisis diario en el sistema sistema, de ser necesario este se rellenará en las próximas 72 horas de forma automática..",
+            "3": "Todas las compras hechas en esta página están protegidas por una garantía de más de 6 meses, nuestro sistema hace relleno diario a las 8: 00 am hora colombiana, de ser necesario.",
+            "4": "Si notas que en tu compra hay otros paquetes que nos has adquirido es porque son regalos que te hemos dado. No te preocupes, son gratis.  ",
+            "5": "Ten en cuenta que al aceptar los términos y condiciones como también nuestra política de privacidad, cumples con no hacer reembolsos o disputas. En casos de inconvenientes con tu compra, podrás hacérnoslo saber primero a nosotros. Responderemos a todas tus inquietudes rápidamente."
+        },
+        "valorAntiguo": 27000,
+        "valorNuevo": 5000,
         "imagen": "https://www.flaticon.es/icono-gratis/camisa_7609074?term=shirt&page=1&position=4&page=1&position=4&related_id=7609074&origin=search"
     }
 }
