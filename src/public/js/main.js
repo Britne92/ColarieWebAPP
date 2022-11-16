@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(function () {
   $('#WAButton').floatingWhatsApp({
-    phone: '+34611682331', //WhatsApp Business phone number International format-
+    phone: '+573212130001', //WhatsApp Business phone number International format-
     //Get it with Toky at https://toky.co/en/features/whatsapp.
     headerTitle: "<i class='fa-brands fa-whatsapp'></i> Chat ColarieStore!", //Popup Title
     popupMessage: 'Hola, como podemos ayudarte?', //Popup Message
