@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd client && npm run build",
     "install-client": "cd client && npm i -f",
-    "heroku-postbuild": "npm install-client && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "nodemon server.js",
     "client": "cd client && npm start"
 
