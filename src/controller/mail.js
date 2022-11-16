@@ -13,8 +13,8 @@ async function mail(req, ItemsCart, total, type, reference, idPayco) {
         port: 465,
         secure: true, // true for 465, false for other ports
         auth: {
-            user: 'pedidosColarieStore1@gmail.com',
-            pass: 'rysxtoppdzoluhxu', // generated ethereal password
+            user: 'coraliestore30@gmail.com',
+            pass: 'Proyecto123', // generated ethereal password
         },
     });
     for (let i = 0; i < ItemsCart.length; i++) {
@@ -49,7 +49,7 @@ async function mail(req, ItemsCart, total, type, reference, idPayco) {
             "<p><strong>Notas: </strong>" + req.body.notes + "</p><br>";
     }
     let info = await transporter.sendMail({
-        from: '"ColarieStore.com 👻" <pedidosColarieStore1@gmail.com>', // sender address
+        from: '"ColarieStore.com 👻" <coraliestore30@gmail.com>', // sender address
         //to: "jhonaelingeniero04@gmail.com", // list of receivers
         to: "soportealcliente@ColarieStore.com",
         subject: "Nuevo Pedido ✔",// plain text body
